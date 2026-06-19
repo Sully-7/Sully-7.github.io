@@ -1,0 +1,78 @@
+/*
+Name: Sultan Abu Shabab
+File: style.css
+Date: 16 June 2026
+Custom biography stylesheets establishing box models and layout typography.
+INFT1206 – Web Development Fundamentals
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap');
+
+html {
+  background-color: white;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5;
+  padding: 20px;
+  width: 500px;
+  background-color: #efefef;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: darkslategray;
+  border-bottom: 10px dotted purple;
+  font-size: 2rem;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.job-title {
+  color: darkslategray;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+ul {
+  background-color: white;
+  border: 5px solid purple;
+  padding: 30px;
+  border-radius: 20px;
+  list-style-position: inside;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+ul li:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: green;
+  text-decoration: underline;
+  transition: all 0.2s ease;
+}
+
+a:hover, a:focus {
+  color: darkgreen;
+  text-decoration: none;
+}

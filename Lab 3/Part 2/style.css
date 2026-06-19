@@ -6,7 +6,6 @@ Custom typeset community school Homepage
 INFT1206 – Web Development Fundamentals
 */
 /* General setup */
-
 * {
   box-sizing: border-box;
 }
@@ -19,7 +18,6 @@ body {
 }
 
 /* Layout */
-
 main {
   display: grid;
   grid-template-columns: 5fr 2fr 2fr;
@@ -28,7 +26,6 @@ main {
 }
 
 /* header and footer */
-
 header {
   border-bottom: 5px solid #aa6666;
 }
@@ -39,4 +36,114 @@ footer {
 
 footer p {
   text-align: center;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:serif&family=Playfair+Display:wght@700;900&display=swap');
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: 0.03em;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', Times, serif;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 25px;
+  margin-bottom: 0 !important;
+}
+
+section h2 + p {
+  text-indent: 2rem;
+}
+
+p {
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+a:link, a:visited {
+  color: #aa6666;
+  text-decoration: underline; 
+  outline: none; 
+}
+
+a:hover, a:focus {
+  color: #7d4444;
+  text-decoration: none;
+  outline: none;
+}
+
+a:active {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+a[href^="http"]::after {
+  content: "";
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-left: 4px;
+  background-image: url('https://mdn.github.io/shared-assets/images/examples/external-link-52.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+
+ul, ol {
+  line-height: 1.6;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-left: 25px;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-bottom: 10px;
+}
+
+nav ul li a {
+  display: block;
+  width: 100%;
+  padding: 12px 10px;
+  background-color: #aa6666;
+  color: #ffffff !important;
+  font-family: 'Playfair Display', serif; 
+  font-weight: 700;
+  text-align: center; 
+  text-transform: uppercase; 
+  text-decoration: none !important;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+  background-color: #7d4444;
+  color: #ffffff !important;
 }

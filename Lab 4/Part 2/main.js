@@ -18,3 +18,18 @@ function updateDisplayedImage(src, alt) {
   displayedImage.src = src;
   displayedImage.alt = alt;
 }
+
+for (const image of images) {
+  const newImage = document.createElement("img");
+  const fullSrc = baseURL + image.filename;
+  
+  newImage.src = fullSrc;
+  newImage.alt = image.alt;
+  newImage.setAttribute("tabindex", "0");
+  
+  thumbBar.appendChild(newImage);
+  
+  newImage.addEventListener("click", () => {
+    updateDisplayedImage(fullSrc, image.alt);
+  });
+}

@@ -4,16 +4,17 @@ File: index.html
 Date: 29 July 2026
 HTML forms challenge implementing semantically structured form controls, fieldsets, and CSS styling.
 -->
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Forms challenge</title>
-    <link href="style.css" rel="stylesheet" />
-    <script defer src="index.js"></script>
-  </head>
-  <body>
-    <h1>We want your feedback!</h1>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms challenge</title>
+  <link href="style.css" rel="stylesheet">
+  <script defer src="index.js"></script>
+</head>
+<body>
+  <h1>We want your feedback!</h1>
 
   <p>
     We're very excited that you visited the <a href="#">little house in the woods</a>,
@@ -25,7 +26,7 @@ HTML forms challenge implementing semantically structured form controls, fieldse
 
   <img src="https://mdn.github.io/shared-assets/images/examples/learn/woodland-strip.jpg" alt="">
 
-   <form action="#" method="post">
+  <form action="#" method="post">
 
     <div class="form-section">
       <h2>Facilities</h2>
@@ -72,40 +73,61 @@ HTML forms challenge implementing semantically structured form controls, fieldse
         <label for="chair-majestic">Majestic</label>
       </fieldset>
     </div>
-    --
 
-    About your hosts
+    <div class="form-section">
+      <h2>About your hosts</h2>
 
-    Who's your favorite bear?
-    Papa bear
-    Mama bear
-    Junior
-    Dozer
+      <div class="separator">
+        <label for="bear">Who's your favorite bear?</label>
+        <select id="bear" name="bear">
+          <option value="papa">Papa bear</option>
+          <option value="mama">Mama bear</option>
+          <option value="junior">Junior</option>
+          <option value="dozer">Dozer</option>
+        </select>
+      </div>
 
-    Which greeting did you prefer?
-    Wave
-    Friendly greeting
-    Growl
-    Claw marks in the door
+      <div class="separator">
+        <label for="greeting">Which greeting did you prefer?</label>
+        <select id="greeting" name="greeting">
+          <option value="wave">Wave</option>
+          <option value="friendly">Friendly greeting</option>
+          <option value="growl">Growl</option>
+          <option value="claw">Claw marks in the door</option>
+        </select>
+      </div>
+    </div>
 
-    --
+    <div class="form-section">
+      <h2>Any other feedback?</h2>
 
-    Any other feedback?
+      <div>
+        <label for="comments">Give us your comments</label><br>
+        <textarea id="comments" name="comments"></textarea>
+      </div>
+    </div>
 
-    Give us your comments
+    <div class="form-section">
+      <h2>Your details</h2>
 
-    --
+      <div class="separator">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+      </div>
 
-    Your details
+      <div class="separator">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email">
+      </div>
 
-    Name
-    Email
-    Phone
+      <div class="separator">
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone">
+      </div>
+    </div>
 
-    --
+    <button type="submit">Submit</button>
 
-    Submit
-
-    --
-  </body>
+  </form>
+</body>
 </html>

@@ -1,6 +1,5 @@
 const displayedImage = document.querySelector(".displayed-img");
 const thumbBar = document.querySelector(".thumb-bar");
-
 const btn = document.querySelector("button");
 const overlay = document.querySelector(".overlay");
 
@@ -33,3 +32,15 @@ for (const image of images) {
     updateDisplayedImage(fullSrc, image.alt);
   });
 }
+
+btn.addEventListener("click", () => {
+  const btnClass = btn.getAttribute("class");
+  if (btnClass === "dark") {
+    btn.textContent = "Lighten";
+    overlay.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+  } else {
+    btn.textContent = "Darken";
+    overlay.style.backgroundColor = "rgba(0, 0, 0, 0)";
+  }
+  btn.classList.toggle("dark");
+});
